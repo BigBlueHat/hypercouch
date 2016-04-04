@@ -18,6 +18,20 @@ The variant included here is based on that (New BSD licensed) code, but
 includes a default collection which *is* the primary index of the current
 database.
 
+### Usage
+
+1. Setup a `hypercouch.dev` (or whatever you like) in your `/etc/hosts` file pointing to the IP
+of your CouchDB or to a Cloudant account.
+2. Add a `vhosts` entry to your CouchDB config pointing to `/hypercouch/_design/hal/_rewrite/`
+
+```
+$ couchapp push hal/ http://{user}:{pass}@localhost:5984/hypercouch
+```
+
+3. Use the
+[HAL Browser](http://haltalk.herokuapp.com/explorer/browser.html#http://hypercouch.dev:5984)
+to...browse it!
+
 ## Collection+JSON
 
 TBD

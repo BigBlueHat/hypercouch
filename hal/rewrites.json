@@ -1,4 +1,10 @@
 [
+  {
+    "--": "default database metadata endpoint",
+    "from": "/",
+    "to": "_show/db",
+    "method": "GET"
+  },
     {
         "from": "api",
         "to": "_list/collections/collections",
