@@ -27,13 +27,17 @@ function(head, req) {
         var row;
         // Iterate through rows provided by the CouchDB view
         while (row = getRow()) {
-            // Push an item link into the item array
-            docs._embedded.item.push({
-                // The URI of the item
-                "href": "/" + row.key,
-                // The title of the item or the id
-                "title": row.value.title || row.id
-            });
+          var hal_row = row;
+          // Push an item link into the item array
+          hal_row._links = {
+            "self": {
+              // The URI of the item
+              "href": "/" + encodeURIComponent(row.key),
+              // The title of the item or the id
+              "title": row.value.title || row.id
+            }
+          };
+          docs._embedded.item.push(hal_row);
         }
         // Send the JSON object, seralized as a string
         send(JSON.stringify(docs));
