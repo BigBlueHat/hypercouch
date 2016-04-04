@@ -10,6 +10,11 @@
     "to": "_list/primary/_all_docs",
     "method": "GET"
   },
+  {
+    "from": "/:id",
+    "to": "_show/doc/:id",
+    "method": "GET"
+  },
     {
         "from": "api",
         "to": "_list/collections/collections",
