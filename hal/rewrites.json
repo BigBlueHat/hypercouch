@@ -5,6 +5,11 @@
     "to": "_show/db",
     "method": "GET"
   },
+  {
+    "from": "/_all_docs",
+    "to": "_list/primary/_all_docs",
+    "method": "GET"
+  },
     {
         "from": "api",
         "to": "_list/collections/collections",
