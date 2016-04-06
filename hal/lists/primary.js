@@ -19,6 +19,10 @@ function(head, req) {
           "self": {
             "href": "/_all_docs",
             "title": "All Docs in " + req.info.db_name
+          },
+          "collection": {
+            "href": "/",
+            "title": req.info.db_name
           }
         };
         // CouchDB "rows" (from _view) are essentially HAL partial embedded
