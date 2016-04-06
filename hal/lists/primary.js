@@ -38,7 +38,7 @@ function(head, req) {
               // The URI of the item
               "href": "/" + encodeURIComponent(row.key),
               // The title of the item or the id
-              "title": row.value.title || row.id
+              "title": row.key
             }
           };
           docs._embedded.item.push(hal_row);
