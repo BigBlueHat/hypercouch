@@ -1,6 +1,6 @@
 # HyperCouch
 
-[![Apache 2.0 License](https://img.shields.io/badge/license-Apache-2.0-blue.svg?style=flat-square)](LICENSE)
+[![GitHub license](https://img.shields.io/github/license/bigbluehat/hypercouch.svg)](http://github.com/bigbluehat/hypercouch)
 [![Patreon](https://img.shields.io/badge/donate-patreon-orange.svg?style=flat-square)](https://www.patreon.com/BigBlueHat)
 
 HyperCouch is (to be) a collection of CouchApps that enable various
