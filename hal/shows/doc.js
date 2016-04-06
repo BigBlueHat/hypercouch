@@ -6,6 +6,9 @@ function(doc, req) {
   // Handle a request for the "hal" content type
   provides("hal", function() {
     var hal = doc;
+    // TODO: turn CouchDB _revisions identifiers into "previous-version" links
+    // http://tools.ietf.org/html/rfc5829
+    delete hal._revisions;
     hal._links = {
       "self": {
         "href": "/" + doc._id,
