@@ -14,7 +14,7 @@ function(doc, req) {
         "href": "/" + doc._id,
         "title": doc.title || doc._id
       },
-      "container": {
+      "collection": {
         "href": "/",
         "title": req.info.db_name
       }
